@@ -6,6 +6,7 @@
 !/
 /*
 !/.gitignore
+!/.zprofile
 
 !.config
 .config/*
@@ -19,8 +20,8 @@
 !.config/waybar
 !.config/waybar/*
 
-!.config/fish
-!.config/fish/*
+!.config/zsh
+!.config/zsh/*
 
 !.config/nvim
 !.config/nvim/*

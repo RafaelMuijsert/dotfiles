@@ -1,0 +1,6 @@
+HISTFILE=~/.cache/zsh_history
+HISTSIZE=8192
+SAVEHIST=8192
+PROMPT="%~ "
+
+(cat $HOME/.cache/wal/sequences &)
