@@ -1,9 +1,6 @@
 # Start a terminal
 bindsym $mod+Return exec $TERMINAL
 
-# Set a random wallpaper
-bindsym $mod+Shift+r exec $set_wallpaper
-
 # Kill focused window
 bindsym $mod+Shift+q kill
 
@@ -11,7 +8,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Space exec $launcher
 
 # Launch file browser
-bindsym $mod+o exec $FILEBROWSER --new-window
+bindsym $mod+o exec nautilus --new-window
 
 # Launch browser
 bindsym $mod+i exec $BROWSER
@@ -19,11 +16,17 @@ bindsym $mod+i exec $BROWSER
 # Launch editor
 bindsym $mod+u exec alacritty -e $EDITOR
 
-# Volume controls
+# Screenshots
+set $filename $HOME/Pictures/Screenshots/$(date +'%Y-%m-%d at %H:%M:%S') - $(swaymsg -t get_tree | jq -r '..|try select(.focused == true).app_id').png
+set $screenshot grim -g "$(slurp)" "$filename" 
+bindsym Print exec $screenshot && wl-copy < "$filename" && notify-send "Screenshot copied to clipboard"
+bindsym Shift+Print exec $screenshot && curl -F"file=@$filename" https://0x0.st | wl-copy && notify-send "Upload succesful"
 
+# Volume controls
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 

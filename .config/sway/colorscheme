@@ -1,0 +1,17 @@
+set $background #f8f8f8
+
+set $color00 #181818
+set $color01 #282828
+set $color02 #383838
+set $color03 #585858
+set $color04 #b8b8b8
+set $color05 #d8d8d8
+set $color06 #e8e8e8
+set $color08 #ab4642
+set $color09 #dc9656
+set $color0A #f7ca88
+set $color0B #a1b56c
+set $color0C #86c1b9
+set $color0D #7cafc2
+set $color0E #ba8baf
+set $color0F #a16946

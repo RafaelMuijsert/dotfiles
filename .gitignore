@@ -17,20 +17,18 @@
 !.config/sway
 !.config/sway/*
 
-!.config/waybar
-!.config/waybar/*
+!.config/i3status-rust
+!.config/i3status-rust/*
 
 !.config/zsh
 !.config/zsh/*
+.config/zsh/.zcompdump
 
 !.config/nvim
 !.config/nvim/*
 
 !.config/mako
 !.config/mako/*
-
-!.config/wofi
-!.config/wofi/*
 
 !.config/neofetch
 !.config/neofetch/*

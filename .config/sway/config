@@ -8,36 +8,34 @@ set $down j
 set $up k
 set $right l
 
+# xdg-desktop-portal
+exec dbus-update-activation-environment --systemd WAYLAND_DISLPLAY XDG_CURRENT_DESKTOP=sway
+
 # Launcher
-set $launcher wofi --show drun -I | xargs swaymsg exec --
+output * bg #000000 solid_color
+# set $launcher pkill wofi || wofi --fork --insensitive --show drun --height=640 --width=320 -I | xargs swaymsg exec --
+set $launcher pkill fuzzel || fuzzel \
+	--font="Hack":size=16 \
+	--text-color=ffffffff \
+	--selection-color=bbbbbbff \
+	--background=000000bb \
+	--horizontal-pad=8 \
+	--prompt="Type to search: " \
+	--border-color=000000ff \
+	--border-radius=24 \
 
-set $wallpaper_dir $HOME/Pictures/Wallpapers
-set $set_wallpaper \
-	wallpaper=$(find $wallpaper_dir -type f | shuf -n 1) && \
-	wal -qni "${wallpaper}" && \
-	swaymsg output "*" background "${wallpaper}" fill
 
-exec $set_wallpaper
-exec pipewire
-exec pipewire-pulse
-include ~/.cache/wal/colors-sway
+# Colors
+include colorscheme
+client.focused          $color05 $color06 $color00 $color06 $color06
+client.focused_inactive $color01 $color01 $color05 $color03 $color01
+client.unfocused        $color01 $color00 $color05 $color01 $color01
+client.urgent           $color08 $color08 $color00 $color08 $color08
+client.placeholder      $color00 $color00 $color05 $color00 $color00
+client.background       $background
 
-client.focused          $color14				$background	$foreground	$color7 	$foreground
-client.focused_inactive $color3					$background	$foreground	$color8 	$color8
-client.unfocused        $color1         $background	$foreground	$color2 	$color2
-client.urgent           $color5         $background	$foreground	$color13 	$color6
+default_border pixel 1
 
-default_border pixel 2
-gaps outer 2
-gaps inner 4
-
-# Lock screen after 3 minutes of inactivity, turn off screen after 4
-exec_always swayidle -w \
-	timeout 180 'swaylock -f -c 000000' \
-	timeout 240 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 000000'
-
-# Natural scrolling on touchpads
 input type:touchpad {
 	natural_scroll enabled
 	scroll_factor 1
@@ -50,11 +48,21 @@ input type:pointer {
 }
 
 floating_modifier $mod normal
-# Status Bar
 bar {
+	font Hack 10
 	position top
-	swaybar_command waybar
+	status_command i3status-rs
+	colors {
+		separator #ffffff
+		statusline #ffffff
+		background #000000
+		focused_workspace #484848 #484848 #ffffff
+		active_workspace #242424 #242424 #ffffff
+		inactive_workspace #000000 #000000 #ffffff
+		urgent_workspace #242424 #242424 #ffffff
+	}
 }
+
 
 include binds
 include /etc/sway/config.d/*

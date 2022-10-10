@@ -1,0 +1,30 @@
+icons = "material-nf"
+
+[[block]]
+block = "music"
+buttons = ["prev", "play", "next"]
+marquee_speed = 0.2
+marquee_interval = 10
+
+[[block]]
+block = "sound"
+step_width = 1
+
+[[block]]
+block = "net"
+format = "{ip}"
+
+[[block]]
+block = "cpu"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_used}"
+
+[[block]]
+block = "time"
+format = "%R"
+timezone = "Europe/Amsterdam"
+interval = 60
+
