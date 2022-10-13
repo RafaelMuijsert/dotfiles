@@ -20,9 +20,9 @@
 !.config/i3status-rust
 !.config/i3status-rust/*
 
-!.config/zsh
-!.config/zsh/*
-.config/zsh/.zcompdump
+!.config/zsh/.zshrc
+!.config/zsh/aliases
+!.config/zsh/config
 
 !.config/nvim
 !.config/nvim/*

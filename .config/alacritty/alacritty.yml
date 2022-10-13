@@ -1,6 +1,6 @@
 # Windows Terminal :skull:
 window:
-  opacity: 1
+  opacity: 0.8
 font:
   normal:
     family: Cascadia Mono

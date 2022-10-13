@@ -1,2 +1,3 @@
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias ls="ls --color=auto"
+alias yt='yt-dlp --progress --embed-thumbnail --embed-metadata --download-archive "$HOME/Videos/.archive" -o "$HOME/Videos/%(channel)s/%(title)s.%(ext)s"'
