@@ -11,6 +11,10 @@ set $right l
 # xdg-desktop-portal
 exec dbus-update-activation-environment --systemd WAYLAND_DISLPLAY XDG_CURRENT_DESKTOP=sway
 
+
+# Turn off screen when the lid is closed
+bindswitch lid:toggle output eDP-1 toggle
+
 # Launcher
 output * bg #000000 solid_color
 # set $launcher pkill wofi || wofi --fork --insensitive --show drun --height=640 --width=320 -I | xargs swaymsg exec --
@@ -48,7 +52,7 @@ input type:pointer {
 }
 
 input type:keyboard {
-	repeat_delay 200
+	repeat_delay 300
 	repeat_rate 40
 }
 

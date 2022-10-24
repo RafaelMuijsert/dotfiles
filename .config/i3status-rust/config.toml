@@ -1,5 +1,10 @@
 icons = "material-nf"
 
+
+[[block]]
+block = "battery"
+format = "{percentage} ({time} left)"
+
 [[block]]
 block = "music"
 buttons = ["prev", "play", "next"]
@@ -11,6 +16,7 @@ block = "sound"
 step_width = 1
 
 [[block]]
+hide_inactive = true
 block = "net"
 format = "{ip}"
 
