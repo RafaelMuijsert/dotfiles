@@ -1,0 +1,20 @@
+# Ignore everything 
+* 
+
+# Except
+
+!/
+/*
+!/.gitignore
+
+!.config
+.config/*
+
+!.config/alacritty
+!.config/alacritty/*
+
+!.config/fish
+!.config/fish/*
+
+!.config/hypr
+!.config/hypr/*
