@@ -1,0 +1,36 @@
+[icons]
+icons = "none"
+
+[[block]]
+block = "music"
+format = " $icon $combo.str(max_w:30) $prev $play $next |"
+
+[[block]]
+block = "cpu"
+interval = 1
+format = " $icon $utilization "
+
+[[block]]
+block = "memory"
+format = " $icon $mem_used_percents "
+interval = 30
+warning_mem = 70
+critical_mem = 90
+
+[[block]]
+block = "battery"
+format = " $icon $percentage "
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "net"
+format = " $icon {$ssid ($signal_strength)|Wired connection} $device "
+
+[[block]]
+block = "time"
+interval = 5
+format = " $timestamp.datetime(f:'%Y-%m-%d %R') "
+
+

@@ -1,0 +1,26 @@
+# Ignore everything
+*
+
+# Except
+!.gitignore
+!.config
+
+# i3
+!.config/i3
+!.config/i3/*
+
+# Status bar
+!.config/i3status-rust/
+!.config/i3status-rust/*
+
+# X11
+!.config/X11
+!.config/X11/*
+
+# Shell
+!.config/fish
+!.config/fish/config.fish
+!.config/fish/environment.fish
+!.config/fish/style.fish
+!.config/fish/programs.fish
+

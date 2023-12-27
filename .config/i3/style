@@ -1,0 +1,18 @@
+# Global font
+font monospace 8
+
+# Border
+default_border pixel 1
+default_floating_border pixel 1
+hide_edge_borders smart
+
+# Colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #ffffff #285577 #ffffff #ffffff   #888888
+client.focused_inactive #000000 #5f676a #ffffff #000000   #000000
+client.unfocused        #000000 #222222 #ffffff #000000   #000000
+client.urgent           #ff0000 #900000 #ffffff #ff0000   #ff0000
+client.placeholder      #000000 #000000 #ffffff #000000   #000000
+
+client.background       #ffffff
+
