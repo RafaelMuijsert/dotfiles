@@ -33,6 +33,10 @@ bindsym $mod+Shift+$right move right
 bindsym $mod+b split h
 bindsym $mod+v split v
 
+## Container layout
+bindsym $mod+e layout toggle split
+bindsym $mod+w layout tabbed
+
 ## Make current window fullscreen
 bindsym $mod+f fullscreen toggle
 
@@ -81,6 +85,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id wpctl set-volume @DEFAULT_AUDI
 bindsym XF86AudioLowerVolume exec --no-startup-id wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%- && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id wpctl set-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 1%+ && $refresh_i3status
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 1%- && $refresh_i3status
 
 # Programs
 bindsym $mod+Return exec --no-startup-id $TERMINAL

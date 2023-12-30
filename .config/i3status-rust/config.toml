@@ -8,7 +8,7 @@ format = " $icon $combo.str(max_w:30) $prev $play $next |"
 [[block]]
 block = "cpu"
 interval = 1
-format = " $icon $utilization "
+format = " $icon $utilization $frequency"
 
 [[block]]
 block = "memory"
@@ -23,6 +23,9 @@ format = " $icon $percentage "
 
 [[block]]
 block = "sound"
+
+[[block]]
+block = "backlight"
 
 [[block]]
 block = "net"
