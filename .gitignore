@@ -24,3 +24,7 @@
 !.config/fish/style.fish
 !.config/fish/programs.fish
 
+# GTK 
+!.config/gtk-3.0
+!.config/gtk-3.0/*
+
