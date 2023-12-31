@@ -31,4 +31,7 @@
 # Rofi
 !.config/rofi
 !.config/rofi/*
-
+!.config/rofi/shared
+!.config/rofi/shared/*
+!.config/rofi/colors
+!.config/rofi/colors/*
