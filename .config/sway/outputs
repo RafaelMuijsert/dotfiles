@@ -1,0 +1,4 @@
+output * {
+    scale 1
+    bg $(find $HOME/Pictures/Wallpapers -type f | shuf -n 1) fill
+}

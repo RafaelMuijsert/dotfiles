@@ -1,4 +1,4 @@
-set -x TERMINAL st
-set -x LAUNCHER rofi -show drun -theme "$HOME/.config/rofi/theme.rasi"
+set -x TERMINAL alacritty
+set -x LAUNCHER fuzzel
 set -x BROWSER firefox
 set -x EDITOR nvim

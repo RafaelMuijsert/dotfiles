@@ -5,17 +5,17 @@
 !.gitignore
 !.config
 
-# i3
-!.config/i3
-!.config/i3/*
+# Sway
+!.config/sway
+!.config/sway/*
+
+# Alacritty
+!.config/alacritty
+!.config/alacritty/*
 
 # Status bar
 !.config/i3status-rust/
 !.config/i3status-rust/*
-
-# X11
-!.config/X11
-!.config/X11/*
 
 # Shell
 !.config/fish
@@ -28,10 +28,3 @@
 !.config/gtk-3.0
 !.config/gtk-3.0/*
 
-# Rofi
-!.config/rofi
-!.config/rofi/*
-!.config/rofi/shared
-!.config/rofi/shared/*
-!.config/rofi/colors
-!.config/rofi/colors/*

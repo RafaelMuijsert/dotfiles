@@ -1,0 +1,3 @@
+# Start XDG autostart .desktop files using dex
+exec --no-startup-id dex --autostart --environment sway
+

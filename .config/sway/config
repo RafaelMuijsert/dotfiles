@@ -2,3 +2,4 @@ include keybinds
 include programs
 include style
 include bar
+include outputs

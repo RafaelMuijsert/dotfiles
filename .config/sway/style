@@ -1,5 +1,5 @@
 # Global font
-font monospace 8
+font JetBrainsMono Nerd Font 8
 
 # Border
 default_border pixel 1

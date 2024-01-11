@@ -5,13 +5,13 @@ set $down j
 set $up k
 set $right l
 
-# i3 management
+# Sway management
 ## Reload configuration
 bindsym $mod+Shift+c reload
-## Restart i3
+## Restart Sway
 bindsym $mod+Shift+r restart
-## Exit i3
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+## Exit Sway
+bindsym $mod+Shift+e exec --no-startup-id "swaynag -t warning -m 'Exit Sway?' -B 'Yes' 'swaymsg exit'"
 
 # Window management
 ## Kill active window
