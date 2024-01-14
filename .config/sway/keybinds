@@ -93,6 +93,6 @@ bindsym Print exec --no-startup-id shotgun $(hacksaw -f "-i %i -g %g") - | xclip
 
 
 # Programs
-bindsym $mod+Return exec --no-startup-id foot
+bindsym $mod+Return exec --no-startup-id $TERMINAL
 bindsym $mod+space exec --no-startup-id $LAUNCHER
 bindsym $mod+i exec --no-startup-id $BROWSER

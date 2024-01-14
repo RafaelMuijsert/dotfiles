@@ -10,8 +10,8 @@
 !.config/sway/*
 
 # Alacritty
-!.config/foot
-!.config/foot/*
+!.config/alacritty
+!.config/alacritty/*
 
 # Status bar
 !.config/i3status-rust/
