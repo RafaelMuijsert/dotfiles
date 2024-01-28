@@ -10,3 +10,5 @@ set -x XDG_STATE_HOME "$HOME/.local/state"
 set -x XAUTHORITY "$XDG_RUNTIME_DIR/Xauthority"
 set -x XINITRC "$XDG_CONFIG_HOME/X11/xinitrc"
 
+# Add .local/bin to PATH 
+set -x PATH $PATH $HOME/.local/bin
