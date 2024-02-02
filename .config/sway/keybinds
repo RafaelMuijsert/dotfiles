@@ -91,8 +91,16 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && $ref
 
 bindsym Print exec --no-startup-id shotgun $(hacksaw -f "-i %i -g %g") - | xclip -t 'image/png' -selection clipboard
 
-
 # Programs
 bindsym $mod+Return exec --no-startup-id $TERMINAL
 bindsym $mod+space exec --no-startup-id $LAUNCHER
 bindsym $mod+i exec --no-startup-id $BROWSER
+
+# A concise introduction to pure mathematics
+bindsym $mod+z exec --no-startup-id zathura ~/Documents/ACITPM/liebeck.pdf
+bindsym $mod+x exec --no-startup-id $TERMINAL -e nvim ~/Documents/ACITPM/main.tex
+bindsym $mod+a exec --no-startup-id zathura ~/Documents/ACITPM/main.pdf
+
+# Lineaire algebra
+bindsym $mod+Shift+z exec --no-startup-id zathura ~/Documents/Academia/Lineaire\ Algebra/Opdrachten/main.pdf
+bindsym $mod+Shift+x exec --no-startup-id $TERMINAL -e nvim ~/Documents/Academia/Lineaire\ Algebra/Opdrachten/main.tex
