@@ -1,10 +1,4 @@
 bar {
     position top
-    status_command i3status-rs
-    colors {
-        background #000000
-        focused_workspace  #FFFFFF #FFFFFF #000000
-        inactive_workspace #000000 #000000 #ffffff
-        urgent_workspace   #FFFFFF #FFFFFF #000000
-    }
+    swaybar_command waybar
 }
